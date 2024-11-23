@@ -4,6 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enter Tech Cafe</title>
+    <style>
+      /* reset para remover los espacios por defecto */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Verdana, sans-serif;
+      }
+
+      header {
+        padding: 30px;
+      }
+
+      nav {
+        /* border: solid; */
+        display: flex;
+        /* alineación horizontal */
+        justify-content: space-between;
+        /* alineació vertical */
+        align-items: center;
+        margin-top: 15px;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      .hero {
+        display: flex;
+        padding: 40px 30px;
+        flex-wrap: wrap;
+        gap: 20px;
+        background-color: #f6ebda;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 40px;
+        max-width: 400px;
+        color: #2f2105;
+      }
+
+      p {
+        max-width: 500px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        color: #7e7d7a;
+      }
+
+      button {
+        background-color: #2f2105;
+        color: #fff;
+        border: none;
+        padding: 12px 16px;
+        font-family: Verdana, sans-serif;
+        border-radius: 20px;
+      }
+
+      .text-orange {
+        color: #ff902b;
+      }
+
+      .products-container {
+        margin: 30px;
+      }
+
+      h2 {
+        margin-bottom: 40px;
+        font-size: 32px;
+      }
+
+      .products-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .products-list > div {
+        border: solid #ffd28f;
+        border-radius: 8px;
+        padding: 12px;
+      }
+
+      .products-list > div > h4 {
+        color: #2f2105;
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+      .products-list > div > p {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
   </head>
   <body>
     <!-- Menu de navegacion -->
@@ -20,9 +120,11 @@
     </header>
     <main>
       <!-- hero de la web -->
-      <section>
+      <section class="hero">
         <div>
-          <h1>Disfruta tu día con un buen cafe</h1>
+          <h1>
+            Disfruta tu <span class="text-orange">día con</span> un buen cafe
+          </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
             natus dignissimos nulla consequatur unde delectus cumque officia
@@ -32,35 +134,41 @@
           <button>Ordenar ahora</button>
         </div>
         <div>
-          <img src="./images/img-hero.svg" width="250" alt="" />
+          <img src="./images/img-hero.svg" width="300" alt="" />
         </div>
       </section>
       <!-- Productos recomendados -->
-      <section>
+      <section class="products-container">
         <h2>Productos recomendados</h2>
         <!-- Lista de productos -->
         <!-- contenedor de mi lista -->
-        <div>
+        <div class="products-list">
           <!-- item1 de mi lista -->
           <div>
             <img src="./images/vanilla-late.svg" alt="" />
             <h4>Vanilla latte</h4>
-            <span>Caliente</span>
-            <span>S/ 15</span>
+            <p>
+              <span>Caliente</span>
+              <span>S/ 15</span>
+            </p>
           </div>
           <!-- item2 de mi lista -->
           <div>
             <img src="./images/espresso.svg" alt="" />
             <h4>Espresso</h4>
-            <span>Caliente</span>
-            <span>S/ 12</span>
+            <p>
+              <span>Caliente</span>
+              <span>S/ 12</span>
+            </p>
           </div>
           <!-- item3 de mi lista -->
           <div>
             <img src="./images/hazelnut-latte.svg" alt="" />
             <h4>Hazelnut Latte</h4>
-            <span>Caliente</span>
-            <span>S/ 22</span>
+            <p>
+              <span>Caliente</span>
+              <span>S/ 22</span>
+            </p>
           </div>
         </div>
       </section>
