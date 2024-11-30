@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Un arreglo es una lista da datos
+      const alumnos = ["Kenner", "Luis", "Bruno", "Alex"];
+      console.log(alumnos[3]);
+      const listaDeDatos = ["Linder", 45, true, -10, "Pepe", false];
+      const arregloDentroDeArreglo = [
+        "Elemento1",
+        [1, 2],
+        "Elemento2",
+        [10, true],
+      ];
+      console.log(arregloDentroDeArreglo[1][0]);
+      console.log(arregloDentroDeArreglo[3][1]);
+
+      const numeros = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      ];
+
+      // clasico
+      console.log("=======CLASSIC FOR========");
+      for (let index = 0; index < numeros.length; index++) {
+        // console.log("i =>", numeros[i]);
+        if (numeros[index] % 2 === 0) {
+          console.log(numeros[index], "es par");
+        } else {
+          console.log(numeros[index], "es impar");
+        }
+      }
+
+      console.log("=======FOR OF========");
+      for (let numero of numeros) {
+        // console.log(numero);
+        if (numero % 2 === 0) {
+          console.log(numero, "es par");
+        } else {
+          console.log(numero, "es impar");
+        }
+      }
+
+      console.log("==========WHILE (mientras)=========");
+      // imprimir los primeros 100 numeros
+      let contador = 0;
+      while (contador <= 100) {
+        console.log(contador);
+        contador++;
+      }
+
+      console.log("=======FUNCIONES========");
+
+      function sumar(numero1, numero2) {
+        console.log("Resultado:", numero1 + numero2);
+      }
+
+      // invocar
+      console.log("=====FUNCTION SUMAR=====");
+      sumar(10, 34.2);
+      sumar(9, 1);
+      sumar(54, -100);
+
+      console.log("=====FUNCTION DIVIDIR====");
+      function dividir(numero1, numero2) {
+        if (numero2 === 0) {
+          console.log("El divisor debe ser diferente a 0");
+        } else {
+          console.log("resultado:", numero1 / numero2);
+        }
+      }
+
+      // function buyTvs() {}
+
+      dividir(100, 2); // 50
+      dividir(2, 4); // 0.5
+      dividir(10, 0); // El divisor debe ser diferente a 0
+      dividir(10, -2); // -5
+      dividir("hola", 2);
+    </script>
+    <!-- <script src="./app.js"></script>
+    <script>
+      saludar();
+      dividir();
+    </script> -->
+  </body>
+</html>
