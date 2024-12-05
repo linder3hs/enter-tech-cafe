@@ -49,8 +49,10 @@ function cambiarColorDeFondo() {
 }
 
 // invocar a la function
-cambiarColorDeFondo();
+// cambiarColorDeFondo();
 
+const gameArea = document.getElementById("game-area");
+/*
 function guardarNombresDeHermanos() {
   const cantidadDeHermanos = parseInt(
     prompt("Ingrese la cantidad de hermanos:")
@@ -67,9 +69,47 @@ function guardarNombresDeHermanos() {
     contador++;
   }
 
-  console.log("Lista de hermanos:", nombresDeHermanos);
+  // vamos a crear una lista ordenada
+  const listaOrdenada = document.createElement("ol");
+  listaOrdenada.style.marginLeft = "40px";
+  listaOrdenada.style.marginTop = "20px";
+
+  for (let nombre of nombresDeHermanos) {
+    const listItem = document.createElement("li");
+    listItem.textContent = nombre;
+
+    listaOrdenada.appendChild(listItem);
+  }
+
+  gameArea.appendChild(listaOrdenada);
 }
 
-guardarNombresDeHermanos();
+*/
 
-// document.createElement("div");
+function guardarNombresDeHermanos() {
+  const cantidadDeHermanos = parseInt(
+    prompt("Ingrese la cantidad de hermanos:")
+  );
+
+  let contador = 0;
+
+  const listaOrdenada = document.createElement("ol");
+  listaOrdenada.style.marginLeft = "40px";
+  listaOrdenada.style.marginTop = "20px";
+
+  while (contador < cantidadDeHermanos) {
+    const nombreDeHermano = prompt("Ingresa el nombre de tu hermano:");
+
+    const listItem = document.createElement("li");
+    listItem.textContent = nombreDeHermano;
+
+    listaOrdenada.appendChild(listItem);
+
+    contador++;
+  }
+
+  // ANTES DE INSERTA UN ELEMENTO DENTRO DE GAMEAREA DEBEMOS LIMPIARLO
+  gameArea.innerHTML = "";
+  // AGREAMOS LA NUVA LISTA DE HERMANOS
+  gameArea.appendChild(listaOrdenada);
+}
